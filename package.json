@@ -1,8 +1,25 @@
 {
-	"name": "browser-agent",
-	"private": true,
-	"version": "0.0.0",
+	"name": "errguard-browser-agent",
+	"private": false,
+	"version": "0.0.1",
 	"type": "module",
+	"license": "Apache-2.0",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/errguard.umd.cjs",
+	"module": "./dist/errguard.js",
+	"exports": {
+		".": {
+			"import": "./dist/errguard.js",
+			"require": "./dist/errguard.umd.cjs"
+		}
+	},
+	"author": {
+		"email": "hello@errguard.app",
+		"name": "ErrGuard",
+		"url": "https://errguard.app"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
