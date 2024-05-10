@@ -3,7 +3,9 @@ export type CreateEventPayload = {
 };
 
 export function createEvent(payload: CreateEventPayload) {
-	return fetch('http://localhost:5174/api/v1/events', {
+	const url = `${import.meta.env.VITE_API_BASE_URL ?? 'https://errguard.app'}/api/v1/events`;
+
+	return fetch(url, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
